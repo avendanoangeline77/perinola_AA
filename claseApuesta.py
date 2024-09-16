@@ -11,3 +11,13 @@ class Apuesta:
         if cuantas > self.fichas:
             raise ValueError(f"No hay tantas fichas(quedan{self.fichas})")
         self.fichas = self.fichas - cuantas
+   
+    def tomarTodas(self):
+        return self.fichas
+    
+    def tieneFichas(self, cuantas=1):
+        return self.fichas >= cuantas
+    
+    def estaVacia(self):
+      return self.fichas == 0
+       
